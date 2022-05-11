@@ -7,9 +7,9 @@ public class Main {
 
     // Задание 1
     public static void checkYear (int year){
-        if (year % 4 == 0){
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
             System.out.println( year + " год является високосным");
-        } else if (year % 100 != 0){
+        } else {
             System.out.println( year + " год не является високосным");
         }
     }
@@ -21,8 +21,7 @@ public class Main {
             System.out.println("Установите облегченную версию для IOS по ссылке");
         } else if (os == 0 && clientDeviceYear == currentYear ){
             System.out.println("Установите версию для IOS по ссылке");
-        }
-        if (os == 1 && clientDeviceYear < currentYear){
+        } else if (os == 1 && clientDeviceYear < currentYear){
             System.out.println("Установите облегченную версию для Android по ссылке");
         } else if (os == 1 && clientDeviceYear == currentYear) {
             System.out.println("Установите версию для Android по ссылке");
@@ -48,7 +47,7 @@ public class Main {
     }
     public static void main(String[] args) {
         // Задание 1
-        checkYear(2022);
+        checkYear(2024);
         printSeparator();
 
         // Задание 2
